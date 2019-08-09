@@ -3,7 +3,7 @@ package models;
 import javax.persistence.*;
 
 @Entity
-public class Person {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
