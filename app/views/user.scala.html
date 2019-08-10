@@ -3,11 +3,11 @@
 @main("Welcome to Play") {
 <script type='text/javascript' src='@routes.Assets.versioned("javascripts/jquery-2.2.0.min.js")'></script>
 
-<ul id="persons"></ul>
+<ul id="users"></ul>
 
-<form method="POST" action="@routes.PersonController.addPerson()">
+<form method="POST" action="@routes.UserController.addUser()">
     @helper.CSRF.formField
     <input type="text" name="name"/>
-    <button type="submit">Add Person</button>
+    <button type="submit">Add User</button>
 </form>
 }
