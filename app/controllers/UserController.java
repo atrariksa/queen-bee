@@ -40,7 +40,11 @@ public class UserController extends Controller {
         User user = formFactory.form(User.class).bindFromRequest(request).get();
         return userRepository
                 .add(user)
-                .thenApplyAsync(p -> redirect(routes.UserController.addUserPage()), ec.current());
+                .thenApplyAsync(
+                        p -> redirect(
+                                routes.UserController.addUserPage()
+                        ), ec.current()
+                );
     }
 
     public CompletionStage<Result> getUsers() {

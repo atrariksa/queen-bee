@@ -16,4 +16,5 @@ public interface UserRepository {
     CompletionStage<Stream<User>> list();
 
     CompletionStage<User> remove(User user);
+
 }
