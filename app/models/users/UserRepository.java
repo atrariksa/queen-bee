@@ -1,4 +1,4 @@
-package models;
+package models.users;
 
 import com.google.inject.ImplementedBy;
 
