@@ -1,5 +1,6 @@
-package models;
+package models.users;
 
+import models.DatabaseExecutionContext;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;

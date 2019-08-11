@@ -1,7 +1,7 @@
 package controllers;
 
-import models.User;
-import models.UserRepository;
+import models.users.User;
+import models.users.UserRepository;
 import play.data.FormFactory;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
