@@ -33,7 +33,7 @@ public class UserController extends Controller {
     }
 
     public Result addUserPage(final Http.Request request) {
-        return ok(views.html.user.render(request));
+        return ok(views.html.users.user.render(request));
     }
 
     public CompletionStage<Result> addUser (final Http.Request request) {
