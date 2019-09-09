@@ -33,14 +33,18 @@ public class UserController extends Controller {
     }
 
     public Result addUserPage(final Http.Request request) {
-        return ok(views.html.user.render(request));
+        return ok(views.html.users.user.render(request));
     }
 
     public CompletionStage<Result> addUser (final Http.Request request) {
         User user = formFactory.form(User.class).bindFromRequest(request).get();
         return userRepository
                 .add(user)
-                .thenApplyAsync(p -> redirect(routes.UserController.addUserPage()), ec.current());
+                .thenApplyAsync(
+                        p -> redirect(
+                                routes.UserController.addUserPage()
+                        ), ec.current()
+                );
     }
 
     public CompletionStage<Result> getUsers() {

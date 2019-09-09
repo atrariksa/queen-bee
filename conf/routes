@@ -8,4 +8,6 @@ GET     /user                     controllers.UserController.addUserPage(request
 POST    /user                     controllers.UserController.addUser(request : Request)
 GET     /users                    controllers.UserController.getUsers()
 
+GET     /dashboard                controllers.dashboards.DashboardController.getDashboard()
+
 #->     /auth                   auth.Routes
